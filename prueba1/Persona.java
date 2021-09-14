@@ -4,12 +4,15 @@ public class Persona {
 
     private String name;
     private int age;
+
+    private boolean alive;
     private static int numOfPeople=0;
 
     public Persona(String nombre, int edad)
     {
         name=nombre;
         age=edad;
+        alive=true;
         numOfPeople++;
     }
 
@@ -25,12 +28,22 @@ public class Persona {
 
     public int old()
     {
-        age++;
+        if(alive)
+        {
+            age++;           
+        }
+        
         return age;
     }
 
     public String getName()
     {
         return name;
+    }
+
+    public void reportDead()
+    {
+        alive = false;
+        numOfPeople--;
     }
 }
