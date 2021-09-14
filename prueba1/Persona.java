@@ -46,4 +46,9 @@ public class Persona {
         alive = false;
         numOfPeople--;
     }
+
+    public void setName(String name)
+    {
+        this.name=name;
+    }
 }
