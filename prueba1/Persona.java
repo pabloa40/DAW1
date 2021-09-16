@@ -43,12 +43,25 @@ public class Persona {
 
     public void reportDead()
     {
-        alive = false;
-        numOfPeople--;
+        if(alive==true)
+        {
+            alive = false;
+            numOfPeople--;
+        }
+
     }
 
     public void setName(String name)
     {
         this.name=name;
+    }
+
+    public void reanimate()
+    {
+        if(alive==false)
+        {
+            alive = true;
+            numOfPeople++;
+        }
     }
 }
