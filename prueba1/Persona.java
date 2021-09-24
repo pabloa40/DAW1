@@ -43,7 +43,7 @@ public class Persona {
 
     public void reportDead()
     {
-        if(alive==true)
+        if(alive)
         {
             alive = false;
             numOfPeople--;
@@ -58,7 +58,7 @@ public class Persona {
 
     public void reanimate()
     {
-        if(alive==false)
+        if(!alive)
         {
             alive = true;
             numOfPeople++;
